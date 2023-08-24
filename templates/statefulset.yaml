@@ -4,7 +4,7 @@ metadata:
   name: web
 spec:
   serviceName: "nginx"
-  replicas: 3
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: nginx
@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        # image: registry.k8s.io/nginx-slim:0.8
         image:  nginx:alpine
         ports:
         - containerPort: 80
@@ -28,10 +27,10 @@ spec:
       name: www
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: managed-premium
+      storageClassName: {{ .Values.storageClass }}
       resources:
         requests:
-          storage: 10Gi
+          storage: {{ .Values.storageSize }}
 
 
 

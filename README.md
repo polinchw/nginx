@@ -6,7 +6,10 @@ This helm chart will run nginx in a Kubernetes statefulset.
 
 ## Installation instructions
 
-```helm install nginx .```
+```git clone https://github.com/polinchw/nginx```
+
+
+```helm install nginx nginx```
 
 ## Delete helm chart
 

@@ -17,7 +17,7 @@ This helm chart will run nginx in a Kubernetes statefulset.
 
 ## Add html files
 
-Shell into nginx pod an place you htmls under this directory:
+Shell into the nginx pod (web-0) and place you htmls under this directory:
 
 /usr/share/nginx/html
 

@@ -14,8 +14,8 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image:  nginx:alpine
+      - name: {{ .Values.image.repository }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
         ports:
         - containerPort: 80
           name: web

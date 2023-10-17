@@ -81,5 +81,5 @@ tolerations: []
 
 affinity: {}
 
-storageClass: local-path
+storageClass: managed-premium
 storageSize: 10Gi

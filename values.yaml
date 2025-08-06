@@ -82,4 +82,4 @@ tolerations: []
 affinity: {}
 
 storageClass: managed-premium
-storageSize: 10Gi
+storageSize: 1Gi

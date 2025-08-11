@@ -76,12 +76,12 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 nodeSelector:
-  agentpool: userpool
+  agentpool: nginx
 
 tolerations:
-  - key: "special"
+  - key: "app_taint"
     operator: "Equal"
-    value: "true"
+    value: "nginx"
     effect: "NoSchedule"
 
 affinity: {}

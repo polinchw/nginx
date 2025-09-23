@@ -81,5 +81,6 @@ tolerations: []
 
 affinity: {}
 
-storageClass: managed-premium
+storageClass: managed-premium-zrs
 storageSize: 1Gi
+templateName: csi-www

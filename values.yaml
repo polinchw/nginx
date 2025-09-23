@@ -75,12 +75,17 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {}
+nodeSelector:
+  kubernetes.io/hostname: aks-agentpool-32972564-vmss000000
 
-tolerations: []
+tolerations:
+  - key: "special"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
 
 affinity: {}
 
 storageClass: managed-premium-zrs
 storageSize: 1Gi
-templateName: csi-www
+templateName: zrs-www

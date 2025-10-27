@@ -76,7 +76,7 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 nodeSelector:
-  kubernetes.io/hostname: aks-userpool-32314026-vmss000002
+  kubernetes.io/hostname: aks-userpool-44718670-vmss000000
 
 tolerations:
   - key: "special"
